@@ -350,3 +350,99 @@ body {
     font-size: 18px;
     color: #667eea;
 }
+/* Login complémentaire */
+.login-footer {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.hint {
+    font-size: 13px;
+    color: #666;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.hint-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.hint code {
+    background: #e9ecef;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #e83e8c;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.version {
+    font-size: 11px;
+    color: #adb5bd;
+}
+
+/* Animation pour le bouton de chargement */
+.btn-primary.loading {
+    position: relative;
+    cursor: wait;
+    opacity: 0.8;
+}
+
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Champ en erreur */
+input.error {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+input.error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,0.25);
+}
+
+/* Message d'erreur amélioré */
+.error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error-icon {
+    font-size: 16px;
+}
+
+/* Amélioration du bouton désactivé */
+.btn-primary:disabled {
+    background-color: #b8c2e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
