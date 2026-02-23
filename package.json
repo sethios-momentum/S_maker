@@ -1,18 +1,21 @@
 {
   "name": "s_maker",
   "version": "1.0.0",
-  "description": "Application professionnelle de gestion de commandes",
-  "main": "desktop/main.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node core/server.js",
-    "desktop": "electron .",
-    "package": "electron-packager . s_maker --platform=win32 --arch=x64 --out=dist --overwrite"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sarah Samuna",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethios-momentum/S_maker.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^26.2.0",
-    "@electron/packager": "^19.0.5"
-  }
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sethios-momentum/S_maker/issues"
+  },
+  "homepage": "https://github.com/sethios-momentum/S_maker#readme"
 }
- 
