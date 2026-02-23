@@ -1,0 +1,18 @@
+{
+  "name": "s_maker",
+  "version": "1.0.0",
+  "description": "Application professionnelle de gestion de commandes",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "node core/server.js",
+    "desktop": "electron .",
+    "package": "electron-packager . s_maker --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "author": "Sarah Samuna",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.2.0",
+    "@electron/packager": "^19.0.5"
+  }
+}
+ 

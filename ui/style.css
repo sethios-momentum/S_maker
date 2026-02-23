@@ -1,0 +1,124 @@
+/* --------------------- GLOBAL --------------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111; /* noir */
+  color: #fff; /* blanc */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --------------------- CARDS --------------------- */
+.card {
+  background-color: #1a1a1a; /* un peu plus clair pour les cartes */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* doré glow */
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* --------------------- INPUTS & SELECTS --------------------- */
+input, select {
+  margin: 10px 0;
+  padding: 12px;
+  width: 95%;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #ffcc00; /* doré au focus */
+  box-shadow: 0 0 10px #ffcc00;
+  outline: none;
+}
+
+/* --------------------- BUTTONS --------------------- */
+button {
+  background-color: #ffcc00;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+/* --------------------- LOGIN --------------------- */
+#login h2 {
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+/* --------------------- DASHBOARD --------------------- */
+#dashboard h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* --------------------- FORM --------------------- */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* --------------------- TABLE --------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #333;
+  color: #ffcc00;
+  padding: 12px;
+  font-size: 14px;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1f1f1f;
+}
+
+.hidden {
+  display: none;
+}

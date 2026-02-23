@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>s_maker - Gestion Commandes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#C9A227">
+</head>
+<body>
+  <div class="container">
+
+    <!-- PAGE LOGIN -->
+    <div id="login" class="card">
+      <h2>Connexion</h2>
+      <label for="username">Nom d'utilisateur :</label>
+      <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" placeholder="Mot de passe" required>
+
+      <button onclick="login()">Se connecter</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="card hidden">
+      <h2>Gestion des Commandes</h2>
+
+      <!-- FILTRES ET RECHERCHE -->
+      <div class="dashboard-controls">
+        <label for="filterStatus">Filtrer par statut :</label>
+        <select id="filterStatus" onchange="filterOrders()">
+          <option value="all">Tout</option>
+          <option value="en cours">En cours</option>
+          <option value="livré">Livré</option>
+          <option value="prêt">Prêt</option>
+        </select>
+
+        <label for="searchClient">Rechercher client :</label>
+        <input type="text" id="searchClient" placeholder="Nom du client" oninput="filterOrders()">
+      </div>
+
+      <!-- Formulaire de commande -->
+      <div class="order-form">
+        <label for="client">Nom du client :</label>
+        <input type="text" id="client" placeholder="Nom du client" required>
+
+        <label for="articles">Articles :</label>
+        <select id="articles" multiple required aria-label="Articles sélectionnés">
+          <option value="Magazine personnalisé">Magazine personnalisé</option>
+          <option value="Cadre photo">Cadre photo</option>
+          <option value="T-shirt">T-shirt</option>
+          <option value="Hoodie">Hoodie</option>
+        </select>
+
+        <label for="prix">Prix total :</label>
+        <input type="number" id="prix" placeholder="Prix total" required>
+
+        <label for="statut">Statut :</label>
+        <select id="statut" required aria-label="Statut de la commande">
+          <option value="" disabled selected>Choisir le statut</option>
+          <option value="en cours">En cours</option>
+          <option value="livré">Livré</option>
+          <option value="prêt">Prêt</option>
+        </select>
+
+        <button onclick="addOrder()">Ajouter la commande</button>
+      </div>
+
+      <!-- Liste des commandes -->
+      <div class="order-list">
+        <h3>Commandes :</h3>
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Articles</th>
+              <th>Prix</th>
+              <th>Statut</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Les commandes apparaîtront ici -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
